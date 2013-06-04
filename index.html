@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Krb5 by Distrotech</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Krb5</h1>
+          <h2>mirror of MIT krb5 repository</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/Distrotech/krb5/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/Distrotech/krb5/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/Distrotech/krb5" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <pre><code>               Kerberos Version 5, Release 1.12
+
+                        Release Notes
+                    The MIT Kerberos Team
+</code></pre>
+
+<h2>
+<a name="copyright-and-other-notices" class="anchor" href="#copyright-and-other-notices"><span class="octicon octicon-link"></span></a>Copyright and Other Notices</h2>
+
+<p>Copyright (C) 1985-2013 by the Massachusetts Institute of Technology
+and its contributors.  All rights reserved.</p>
+
+<p>Please see the file named NOTICE for additional notices.</p>
+
+<h2>
+<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p>Unified documentation for Kerberos V5 is available in both HTML and
+PDF formats.  The table of contents of the HTML format documentation
+is at doc/html/index.html, and the PDF format documentation is in the
+doc/pdf directory.</p>
+
+<p>Additionally, you may find copies of the HTML format documentation
+online at</p>
+
+<pre><code>http://web.mit.edu/kerberos/krb5-latest/doc/
+</code></pre>
+
+<p>for the most recent supported release, or at</p>
+
+<pre><code>http://web.mit.edu/kerberos/krb5-devel/doc/
+</code></pre>
+
+<p>for the release under development.</p>
+
+<p>More information about Kerberos may be found at</p>
+
+<pre><code>http://web.mit.edu/kerberos/
+</code></pre>
+
+<p>and at the MIT Kerberos Consortium web site</p>
+
+<pre><code>http://kerberos.org/
+</code></pre>
+
+<h2>
+<a name="building-and-installing-kerberos-5" class="anchor" href="#building-and-installing-kerberos-5"><span class="octicon octicon-link"></span></a>Building and Installing Kerberos 5</h2>
+
+<p>Build documentation is in doc/html/build/index.html or
+doc/pdf/build.pdf.</p>
+
+<p>The installation guide is in doc/html/admin/install.html or
+doc/pdf/install.pdf.</p>
+
+<p>If you are attempting to build under Windows, please see the
+src/windows/README file.</p>
+
+<h2>
+<a name="reporting-bugs" class="anchor" href="#reporting-bugs"><span class="octicon octicon-link"></span></a>Reporting Bugs</h2>
+
+<p>Please report any problems/bugs/comments using the krb5-send-pr
+program.  The krb5-send-pr program will be installed in the sbin
+directory once you have successfully compiled and installed Kerberos
+V5 (or if you have installed one of our binary distributions).</p>
+
+<p>If you are not able to use krb5-send-pr because you haven't been able
+compile and install Kerberos V5 on any platform, you may send mail to
+<a href="mailto:krb5-bugs@mit.edu">krb5-bugs@mit.edu</a>.</p>
+
+<p>You may view bug reports by visiting</p>
+
+<p><a href="http://krbdev.mit.edu/rt/">http://krbdev.mit.edu/rt/</a></p>
+
+<p>and logging in as "guest" with password "guest".</p>
+
+<h2>
+<a name="des-transition" class="anchor" href="#des-transition"><span class="octicon octicon-link"></span></a>DES transition</h2>
+
+<p>The Data Encryption Standard (DES) is widely recognized as weak.  The
+krb5-1.7 release contains measures to encourage sites to migrate away
+from using single-DES cryptosystems.  Among these is a configuration
+variable that enables "weak" enctypes, which defaults to "false"
+beginning with krb5-1.8.</p>
+
+<h2>
+<a name="major-changes-in-112" class="anchor" href="#major-changes-in-112"><span class="octicon octicon-link"></span></a>Major changes in 1.12</h2>
+
+<h2>
+<a name="krb5-112-changes-by-ticket-id" class="anchor" href="#krb5-112-changes-by-ticket-id"><span class="octicon octicon-link"></span></a>krb5-1.12 changes by ticket ID</h2>
+
+<h2>
+<a name="acknowledgements" class="anchor" href="#acknowledgements"><span class="octicon octicon-link"></span></a>Acknowledgements</h2>
+
+<p>Past and present Sponsors of the MIT Kerberos Consortium:</p>
+
+<pre><code>Apple
+Carnegie Mellon University
+Centrify Corporation
+Columbia University
+Cornell University
+The Department of Defense of the United States of America (DoD)
+Fidelity Investments
+Google
+Iowa State University
+MIT
+Michigan State University
+Microsoft
+The National Aeronautics and Space Administration
+    of the United States of America (NASA)
+Network Appliance (NetApp)
+Nippon Telephone and Telegraph (NTT)
+Oracle
+Pennsylvania State University
+Red Hat
+Stanford University
+TeamF1, Inc.
+The University of Alaska
+The University of Michigan
+The University of Pennsylvania
+</code></pre>
+
+<p>Past and present members of the Kerberos Team at MIT:</p>
+
+<pre><code>Danilo Almeida
+Jeffrey Altman
+Justin Anderson
+Richard Basch
+Mitch Berger
+Jay Berkenbilt
+Andrew Boardman
+Bill Bryant
+Steve Buckley
+Joe Calzaretta
+John Carr
+Mark Colan
+Don Davis
+Alexandra Ellwood
+Carlos Garay
+Dan Geer
+Nancy Gilman
+Matt Hancher
+Thomas Hardjono
+Sam Hartman
+Paul Hill
+Marc Horowitz
+Eva Jacobus
+Miroslav Jurisic
+Barry Jaspan
+Benjamin Kaduk
+Geoffrey King
+Kevin Koch
+John Kohl
+HaoQi Li
+Jonathan Lin
+Peter Litwack
+Scott McGuire
+Steve Miller
+Kevin Mitchell
+Cliff Neuman
+Paul Park
+Ezra Peisach
+Chris Provenzano
+Ken Raeburn
+Jon Rochlis
+Jeff Schiller
+Jen Selby
+Robert Silk
+Bill Sommerfeld
+Jennifer Steiner
+Ralph Swick
+Brad Thompson
+Harry Tsai
+Zhanna Tsitkova
+Ted Ts'o
+Marshall Vale
+Tom Yu
+</code></pre>
+
+<p>The following external contributors have provided code, patches, bug
+reports, suggestions, and valuable resources:</p>
+
+<pre><code>Ian Abbott
+Brandon Allbery
+Russell Allbery
+Brian Almeida
+Michael B Allen
+Heinz-Ado Arnolds
+Derek Atkins
+Mark Bannister
+David Bantz
+Alex Baule
+Adam Bernstein
+Arlene Berry
+Jeff Blaine
+Radoslav Bodo
+Sumit Bose
+Emmanuel Bouillon
+Michael Calmer
+Julien Chaffraix
+Ravi Channavajhala
+Srinivas Cheruku
+Leonardo Chiquitto
+Howard Chu
+Andrea Cirulli
+Christopher D. Clausen
+Kevin Coffman
+Simon Cooper
+Sylvain Cortes
+Nalin Dahyabhai
+Mark Davies
+Dennis Davis
+Mark Deneen
+Roland Dowdeswell
+Jason Edgecombe
+Mark Eichin
+Shawn M. Emery
+Douglas E. Engert
+Peter Eriksson
+Juha Erkkilä
+Ronni Feldt
+Bill Fellows
+JC Ferguson
+William Fiveash
+Ákos Frohner
+Sebastian Galiano
+Marcus Granado
+Scott Grizzard
+Helmut Grohne
+Steve Grubb
+Philip Guenther
+Dominic Hargreaves
+Jakob Haufe
+Matthieu Hautreux
+Paul B. Henson
+Jeff Hodges
+Christopher Hogan
+Love Hörnquist Åstrand
+Ken Hornstein
+Henry B. Hotz
+Luke Howard
+Jakub Hrozek
+Shumon Huque
+Jeffrey Hutzelman
+Wyllys Ingersoll
+Holger Isenberg
+Pavel Jindra
+Joel Johnson
+W. Trevor King
+Mikkel Kruse
+Volker Lendecke
+Jan iankko Lieskovsky
+Oliver Loch
+Kevin Longfellow
+Ryan Lynch
+Nathaniel McCallum
+Greg McClement
+Cameron Meadors
+Alexey Melnikov
+Franklyn Mendez
+Markus Moeller
+Kyle Moffett
+Paul Moore
+Keiichi Mori
+Michael Morony
+Zbysek Mraz
+Edward Murrell
+Nikos Nikoleris
+Felipe Ortega
+Andrej Ota
+Dmitri Pal
+Javier Palacios
+Tom Parker
+Ezra Peisach
+W. Michael Petullo
+Mark Phalan
+Jonathan Reams
+Robert Relyea
+Martin Rex
+Jason Rogers
+Mike Roszkowski
+Guillaume Rousse
+Tom Shaw
+Peter Shoults
+Simo Sorce
+Michael Spang
+Michael Ströder
+Bjørn Tore Sund
+Joe Travaglini
+Rathor Vipin
+Jorgen Wahlsten
+Stef Walter
+Max (Weijun) Wang
+John Washington
+Stef Walter
+Xi Wang
+Kevin Wasserman
+Margaret Wasserman
+Marcus Watts
+Andreas Wiese
+Simon Wilkinson
+Nicolas Williams
+Ross Wilper
+Xu Qiang
+Nickolai Zeldovich
+Hanz van Zijst
+Gertjan Zwartjes
+</code></pre>
+
+<p>The above is not an exhaustive list; many others have contributed in
+various ways to the MIT Kerberos development effort over the years.
+Other acknowledgments (for bug reports and patches) are in the
+doc/CHANGES file.</p>
+        </section>
+
+        <footer>
+          Krb5 is maintained by <a href="https://github.com/Distrotech">Distrotech</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
